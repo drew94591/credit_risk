@@ -64,7 +64,7 @@ credit_risk_resampling.ipynb
 
 ## Summary
 
-* Since both the accuracy score and the recall score has increased substantially in Model 2 compared to Model 1 without sacrificing much in regards to precision we can determine that Model 2 performed the best and is the model that should used.
+* Since both the accuracy score and the recall score has increased substantially in Model 2 compared to Model 1 without sacrificing much in regards to precision we can determine that Model 2 performed the best and is the model that should be used.
 * The accuracy performance in trying to predict the number of high-risk loans is much more important than predicting the number of healthy loans because you wouldn't want to issue any new loans to a borrower whose already in a high-risk loan.
 
 ---
