@@ -48,34 +48,24 @@ credit_risk_resampling.ipynb
 
 ## Overview of the Analysis
 
-In this section, describe the analysis you completed for the machine learning models used in this Challenge. This might include:
-
-* Explain the purpose of the analysis.
-* Explain what financial information the data was on, and what you needed to predict.
-* Provide basic information about the variables you were trying to predict (e.g., `value_counts`).
-* Describe the stages of the machine learning process you went through as part of this analysis.
-* Briefly touch on any methods you used (e.g., `LogisticRegression`, or any resampling method).
+* The purpose of the application is to evaluate several linear regression models using the provided dataset to accurately train, predict, test and identify the creditworthiness of borrowers.
+* The financial information contained within the data set such as loan size, interest rate, borrower's income, debt-to-income ratio, number of accounts, derogatory marks, and total debt helps the models predict what the loan status for each borrower would be.
+* Using the value_counts function of the loan status, we should be able to predict if the borrower's loan is a healthy loan or a high-risk loan.
+* The machine learning process follows a basic pattern of model-fit-predict.  In this three-stage pattern, the machine learning algorithm is provided data (the model stage), and the algorithm learns from this data (the fit stage) to form a predictive model (the predict stage).
+* The data set provided appears to be imbalanced.  Thus we ran two separate LogisticRegression models, one with the original data set as is and the other with a RandomOverSampler for a more balanced data set.  With these two models we are trying to evaluate which one had the most accuracy in predicting a borrower's loan status comparing the precision and recall scores.
 
 ## Results
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
-
 * Machine Learning Model 1:
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
-
-
+  * Model 1 used the original data set as is and had a balanced accuracy score of around 95%.  The precision score for this model was 85% and the recall score was 91%.
 
 * Machine Learning Model 2:
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
+  * Model 2 used the resampling of the data set and had a balanced accuracy score of 99% which increased compared to Model 1.  Though the precision score for this model slightly dropped 1% to 84% than in Model 1. The recall score significantly improved to around 99%. 
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
-
-If you do not recommend any of the models, please justify your reasoning.
-
+* Since both the accuracy score and the recall score has increased substantially in Model 2 compared to Model 1 without sacrificing much in regards to precision we can determine that Model 2 performed the best and is the model that should used.
+* The accuracy performance in trying to predict the number of high-risk loans is much more important than predicting the number of healthy loans because you wouldn't want to issue any new loans to a borrower whose already in a high-risk loan.
 
 ---
 
